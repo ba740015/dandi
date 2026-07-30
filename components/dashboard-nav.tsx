@@ -95,9 +95,10 @@ export default function DashboardNav() {
   return (
     <nav className="flex flex-1 flex-col gap-1">
       {navItems.map((item) => {
-        const active = item.exact
-          ? pathname === item.href
-          : pathname === item.href || pathname.startsWith(`${item.href}/`);
+        const active =
+          "exact" in item && item.exact
+            ? pathname === item.href
+            : pathname === item.href || pathname.startsWith(`${item.href}/`);
 
         return (
           <Link
