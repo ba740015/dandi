@@ -1,5 +1,6 @@
 import Link from "next/link";
 import DashboardNav from "@/components/dashboard-nav";
+import AuthStatus from "@/components/auth-status";
 
 export default function DashboardsLayout({
   children,
@@ -13,6 +14,7 @@ export default function DashboardsLayout({
           Dandi
         </Link>
         <DashboardNav />
+        <AuthStatus />
       </aside>
 
       <div className="flex min-w-0 flex-1 flex-col">{children}</div>
